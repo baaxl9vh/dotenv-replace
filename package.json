@@ -1,0 +1,41 @@
+{
+  "name": "dotenv-replace",
+  "version": "0.0.1",
+  "description": "replace .env file key=value",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "noargs": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace    ",
+    "illegal": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace -a 1 b --c d",
+    "nofile": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace key1=value1 key2=value2 PASSWORD=abc",
+    "test": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace -f ./tests/.env key1=value1 key2=value2 PASSWORD=abc"
+  },
+  "bin": {
+    "dotenv-replace": "dist/bin/dotenv-replace.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baaxl9vh/dotenv-replace.git"
+  },
+  "keywords": [
+    "dotenv",
+    "replace",
+    "edit",
+    ".env"
+  ],
+  "author": "jay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baaxl9vh/dotenv-replace/issues"
+  },
+  "homepage": "https://github.com/baaxl9vh/dotenv-replace#readme",
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "@types/yargs": "^15.0.5",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "yargs": "^15.4.1"
+  }
+}
