@@ -1,6 +1,6 @@
 {
   "name": "dotenv-replace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "replace .env file key=value",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "noargs": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace    ",
     "illegal": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace -a 1 b --c d",
     "nofile": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace key1=value1 key2=value2 PASSWORD=abc",
-    "test": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace -f ./tests/.env key1=value1 key2=value2 PASSWORD=abc"
+    "test": "tsc && npm uninstall -g dotenv-replace && npm install -g . && dotenv-replace -f ./tests/.env key1=value1 key2=value2 PASSWORD=abcd="
   },
   "bin": {
     "dotenv-replace": "dist/bin/dotenv-replace.js"

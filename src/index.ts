@@ -21,7 +21,8 @@ export default function dotEnvReplace(args: string[], filePath?: string, encodin
   for (const arg of args) {
     if (arg && INI_KEY_VAL.test(arg)) {
       const kv = arg.split('=');
-      keyValues.push({key: kv[0].trim(), value: kv[1].trim()});
+      const value = arg.slice(kv[0].length + 1, arg.length).trim();
+      keyValues.push({key: kv[0].trim(), value});
     }
   }
   if (keyValues.length <= 0) {
